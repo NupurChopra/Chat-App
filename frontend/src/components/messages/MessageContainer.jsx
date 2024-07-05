@@ -12,7 +12,7 @@ const MessageContainer = () => {
 		// cleanup function (unmounts)
 		return () => setSelectedConversation(null);
 	}, [setSelectedConversation]);
-
+console.log(selectedConversation)
 	return (
 		<div className='md:min-w-[450px] flex flex-col'>
 			{!selectedConversation ? (
@@ -20,9 +20,9 @@ const MessageContainer = () => {
 			) : (
 				<>
 					{/* Header */}
-					<div className='bg-slate-500 px-4 py-2 mb-2'>
-						<span className='label-text'>To:</span>{" "}
-						<span className='text-gray-900 font-bold'>{selectedConversation.fullName}</span>
+					<div className='bg-sky-700 px-4 py-2 mb-2 flex flex-row gap-4 '>
+						<span className='label-text'><img src={selectedConversation.profilePic} alt="profile Pic " width={"30px"}  height={"30px"}/></span>{" "}
+						<span className='text-white text-semibold'>{selectedConversation.fullName[0].toUpperCase()}{selectedConversation.fullName.slice(1)}</span>
 					</div>
 					<Messages />
 					<MessageInput />

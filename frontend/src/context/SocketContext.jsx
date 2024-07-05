@@ -15,12 +15,15 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("http://localhost:5000", {
+			const socket = io(
+				// "http://localhost:5000",
+				import.meta.env.VITE_BACKEND_URL,
+				{
 				query: {
 					userId: authUser._id,
 				},
 			});
-
+			console.log(import.meta.env.VITE_BACKEND_URL)
 			setSocket(socket);
 
 			// socket.on() is used to listen to the events. can be used both on client and server side

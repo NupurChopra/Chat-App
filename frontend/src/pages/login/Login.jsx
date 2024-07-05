@@ -14,10 +14,9 @@ const Login = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
+		<div className='flex flex-col items-center justify-center min-w-96 mx-auto border-b-4 border-sky-500 border-r-2 rounded-lg'>
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
 				<h1 className='text-3xl font-semibold text-center text-gray-300'>
-					Login
 					<span className='text-blue-500'> ChatApp</span>
 				</h1>
 
@@ -52,7 +51,7 @@ const Login = () => {
 					</Link>
 
 					<div>
-						<button className='btn btn-block btn-sm mt-2' disabled={loading}>
+						<button className='btn-block mt-2 rounded-[10px] border-b-4 border-sky-700 py-1 active:border-b-0 active:opacity-75 text-white text-semibold bg-sky-500' disabled={loading}>
 							{loading ? <span className='loading loading-spinner '></span> : "Login"}
 						</button>
 					</div>

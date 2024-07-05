@@ -27,10 +27,10 @@ const SignUp = () => {
 	};
 
 	return (
-		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
+		<div className='flex flex-col items-center justify-center min-w-96 mx-auto border-b-4 border-sky-400 border-r-2 rounded-lg'>
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
-					Sign Up <span className='text-blue-500'> ChatApp</span>
+				<h1 className='text-3xl font-semibold text-center text-gray-500'>
+					<span className='text-blue-500'> ChatApp</span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
@@ -97,7 +97,7 @@ const SignUp = () => {
 					</Link>
 
 					<div>
-						<button className='btn btn-block btn-sm mt-2 border border-slate-700' disabled={loading}>
+						<button className=' btn-block rounded-[10px] py-2 font-semibold mt-2 bg-sky-500 border-b-[4px] border-b-sky-700 text-white active:border-b-0 active:bg-opacity-75 hover:bg-sky-500 hover:border-b-sky-700 ' disabled={loading}>
 							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
 						</button>
 					</div>
